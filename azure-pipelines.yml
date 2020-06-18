@@ -1,0 +1,19 @@
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: ccdc-3rd-party/conan-azure-devops
+      ref: refs/heads/development
+
+extends:
+  template: third-party-library-all-platforms-from-conan-center.yml@templates
+  parameters:
+    package: rapidjson
+    package_version: 1.1.0
+    source_repository: public-conan-center
+    destination_repository: ccdc-3rdparty-conan
+    # This is a header only library, build only one configuration
+    build_types:
+      - Release
+    platforms:
+      - centos7_gcc9
