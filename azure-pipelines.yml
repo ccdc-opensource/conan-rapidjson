@@ -15,5 +15,3 @@ extends:
     # This is a header only library, build only one configuration
     build_types:
       - Release
-    platforms:
-      - centos7_gcc9
